@@ -116,9 +116,9 @@
                                 <i class="fas fa-{{ $c[2] }}"></i>
                                 {{ $c[3] }}
                             </span>
-                            @if ($item->hari_terlambat > 0)
+                            @if ($item->hari_terlambat > 0 && $item->status_pinjam === 'terlambat')
                                 <div style="font-size: 10px; color: #dc2626; font-weight: 700; margin-top: 4px;">
-                                    +{{ $item->hari_terlambat }} hari (Rp {{ number_format($item->denda, 0, ',', '.') }})
+                                +{{ $item->hari_terlambat }} hari (Rp {{ number_format($item->denda, 0, ',', '.') }})
                                 </div>
                             @endif
                         </td>

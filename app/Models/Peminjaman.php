@@ -46,20 +46,21 @@ class Peminjaman extends Model
      * Hari terlambat (0 kalau belum terlambat)
      */
     public function getHariTerlambatAttribute()
-    {
-        if ($this->status_pinjam === 'kembali') {
-            return 0;
-        }
-
-        $harusKembali = $this->tanggal_harus_kembali;
-        $hariIni = Carbon::now();
-
-        if ($hariIni->lessThanOrEqualTo($harusKembali)) {
-            return 0;
-        }
-
-        return (int) $harusKembali->diffInDays($hariIni);
+{
+    // Kalau status bukan dipinjam/terlambat, tidak terlambat
+    if (!in_array($this->status_pinjam, ['dipinjam', 'terlambat'])) {
+        return 0;
     }
+
+    $harusKembali = $this->tanggal_harus_kembali;
+    $hariIni = Carbon::now();
+
+    if ($hariIni->lessThanOrEqualTo($harusKembali)) {
+        return 0;
+    }
+
+    return (int) $harusKembali->diffInDays($hariIni);
+}
 
     /**
      * Denda = hari terlambat × DENDA_PER_HARI

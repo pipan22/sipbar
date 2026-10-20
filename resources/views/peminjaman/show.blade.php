@@ -85,7 +85,7 @@
                         </span>
                     </td>
                 </tr>
-                @if ($peminjaman->hari_terlambat > 0)
+                if ($peminjaman->hari_terlambat > 0 && $peminjaman->status_pinjam === 'terlambat')
                     <tr>
                         <td style="padding: 10px 0; color: #6b7280; font-size: 13px;">Keterlambatan</td>
                         <td style="padding: 10px 0; color: #dc2626; font-weight: 700;">
