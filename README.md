@@ -1,4 +1,4 @@
-# SIPBAR — Sistem Peminjaman Barang Kampus
+# SIPBAR - Sistem Peminjaman Barang Kampus
 
 SIPBAR adalah sistem informasi berbasis web untuk mengelola peminjaman dan pengembalian barang di lingkungan universitas. Sistem ini mendukung multi-role (Admin, Pegawai, Mahasiswa) dan dilengkapi fitur verifikasi peminjaman, stok otomatis, denda otomatis, serta laporan PDF.
 
