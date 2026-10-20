@@ -8,9 +8,9 @@ SIPBAR adalah sistem informasi berbasis web untuk mengelola peminjaman dan penge
 
 ### 1. Multi-Role Authentication
 
-- Admin — kelola master data, verifikasi peminjaman
-- Pegawai — serah terima barang, terima pengembalian
-- Mahasiswa — ajukan peminjaman, lihat riwayat
+- Admin: kelola master data, verifikasi peminjaman
+- Pegawai: serah terima barang, terima pengembalian
+- Mahasiswa: ajukan peminjaman, lihat riwayat
 
 ### 2. Manajemen Data
 
